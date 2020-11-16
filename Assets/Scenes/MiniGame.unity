@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 180507039}
   - component: {fileID: 180507038}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Count Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -704,10 +704,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rb: {fileID: 0}
-  count: 0
-  movementX: 0
-  movementY: 0
+  countText: {fileID: 180507038}
+  winTextObject: {fileID: 0}
 --- !u!1001 &492079609
 PrefabInstance:
   m_ObjectHideFlags: 0
