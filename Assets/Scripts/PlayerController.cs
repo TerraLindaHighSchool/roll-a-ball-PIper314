@@ -15,13 +15,13 @@ public class PlayerController : MonoBehaviour
 	private float movementY;
 
 	private Rigidbody rb;
-	private int count;
+	private int cheese;
 
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
 
-		count = 0;
+		cheese = 12;
 
 		SetCountText();
 
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 		{
 			other.gameObject.SetActive(false);
 
-			count = count + 1;
+			cheese = cheese - 1;
 
 			SetCountText();
 		}
@@ -57,9 +57,9 @@ public class PlayerController : MonoBehaviour
 
 	void SetCountText()
 	{
-		countText.text = "Count: " + count.ToString();
+		countText.text = "Cheese Left: " + cheese.ToString();
 
-		if (count >= 12)
+		if (cheese <= 0)
 		{
 			winTextObject.SetActive(true);
 		}
