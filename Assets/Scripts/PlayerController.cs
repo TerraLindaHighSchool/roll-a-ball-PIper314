@@ -11,11 +11,14 @@ public class PlayerController : MonoBehaviour
 	public TextMeshProUGUI countText;
 	public GameObject winTextObject;
 
+	public AudioSource Collect;
+
 	private float movementX;
 	private float movementY;
 
 	private Rigidbody rb;
 	private int cheese;
+
 
 	void Start()
 	{
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
 		if (other.gameObject.CompareTag("PickUp"))
 		{
 			other.gameObject.SetActive(false);
+			PlayCollect();
 
 			cheese = cheese - 1;
 
@@ -64,4 +68,10 @@ public class PlayerController : MonoBehaviour
 			winTextObject.SetActive(true);
 		}
 	}
+
+	
+	public void PlayCollect()
+    {
+		Collect.Play();
+    }
 }
