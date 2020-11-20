@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 		if (cheese <= 0)
 		{
 			winTextObject.SetActive(true);
+			//gamePlaying = false;
 		}
 	}
 
@@ -74,4 +75,6 @@ public class PlayerController : MonoBehaviour
     {
 		Collect.Play();
     }
+
+
 }
