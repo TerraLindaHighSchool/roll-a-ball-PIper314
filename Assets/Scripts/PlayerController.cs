@@ -65,8 +65,7 @@ public class PlayerController : MonoBehaviour
 
 		if (cheese <= 0)
 		{
-			winTextObject.SetActive(true);
-			//gamePlaying = false;
+			GameController.instance.EndGame();
 		}
 	}
 
