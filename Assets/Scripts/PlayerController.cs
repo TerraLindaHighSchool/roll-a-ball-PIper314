@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 	public TextMeshProUGUI countText;
 	public GameObject winTextObject;
 
+
 	public AudioSource Collect;
 
 	private float movementX;
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody>();
 
-		cheese = 12;
+		cheese = 1;
 
 		SetCountText();
 
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
 		if (cheese <= 0)
 		{
-			GameController.instance.EndGame();
+			winTextObject.SetActive(true);
 		}
 	}
 
